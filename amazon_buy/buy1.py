@@ -16,8 +16,8 @@ from datetime import datetime
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-LOGIN_ID = 'nktkm06@icloud.com'
-LOGIN_PASSWORD = 'tkm070601'
+LOGIN_ID = 'ここに amazonのログインIDを入れます'
+LOGIN_PASSWORD = 'ここに amazonのパスワードを入れます'
 LOGIN_URL = 'https://www.amazon.co.jp/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.co.jp%2F%3Fref_%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=jpflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&&openid.pape.max_auth_age=0'
 ITEM_URL = input('自動購入したい商品のURLを貼ってください\n--->')
 lim      = int(input('希望額を入力してください\n--->'))
@@ -29,7 +29,7 @@ if confirm == 'no':
 
 
 def LINE_notify(ITEM_URL):
-    line_notify_token = 'o4UIG4GtDBvfUTkimCsMjtUsy3RgZGCJq9EzRmYK2cq'
+    line_notify_token = 'LINE notifyで発行されたトークンを入れます．'
     line_notify_api = 'https://notify-api.line.me/api/notify'
     message = 'amazonで自動購入しました\n商品URL↓\n'+ITEM_URL
     payload = {'message': message}
